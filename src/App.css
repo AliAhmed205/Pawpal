@@ -82,6 +82,11 @@ a {
   justify-content: center;
 }
 
+.i_flex {
+  display: flex;
+  align-items: center;
+}
+
 li {
   list-style-type: none;
 }

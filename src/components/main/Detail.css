@@ -1,4 +1,16 @@
 .animal-detail {
+  & > a {
+    opacity: 1;
+    
+    & i {
+      padding: 1rem;
+      aspect-ratio: 1/1;
+      border-radius: 4rem;
+      background-color: var(--pawpal-color);  
+      margin-left: 2rem;
+      margin-top: 1rem;
+    }
+  }
 
   & .detail {
     display: flex;
@@ -8,17 +20,24 @@
       flex-direction: column;
       padding: 2rem;
 
+      & i {
+        animation: fadeIn .5s var(--x) ease-in backwards;
+      }
+
       & p:first-of-type {
         display: flex;
         flex-direction: row;
+
         & a {
           text-decoration: underline;
+          animation: fadeIn .5s var(--x) ease-in backwards;
         }
       }
 
       & h2 {
         font-size: 3rem;
         font-family: var(--pawpal-logo);
+        animation: fadeIn .5s var(--x) ease-in backwards;
       }
 
       & img {
@@ -26,15 +45,39 @@
         aspect-ratio: 1/1;
         object-fit: cover;
         border-radius: 2rem;
+        scale: .8;
+        animation: popUp .5s forwards;
       }
 
       & p {
         display: flex;
         flex-direction: column;
         margin: .5rem 0;
+        animation: fadeIn .5s var(--x) ease-in backwards;
 
         & span {
           font-weight: 900;
+        }
+      }
+
+      &:nth-of-type(2) {
+
+        &>a {
+          background-color: var(--pawpal-color);
+          color: var(--pawpal-black);
+          padding: 1rem 2rem;
+          width: fit-content;
+          margin-top: auto;
+          margin-bottom: auto;
+          border-radius: 2rem;
+          font-weight: 900;
+          transition: .5s cubic-bezier(0.175, 0.885, 0.32, 1.275);
+          animation: fadeIn .5s var(--x) ease-in backwards;
+
+          &:hover,
+          &:focus {
+            filter: brightness(.8);
+          }
         }
       }
     }
