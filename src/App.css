@@ -1,8 +1,9 @@
 @import url('https://fonts.googleapis.com/css2?family=Lato:ital,wght@0,100;0,300;0,400;0,700;0,900;1,100;1,300;1,400;1,700;1,900&family=Nothing+You+Could+Do&family=Unkempt:wght@400;700&display=swap');
 
 :root {
-  --pawpal-bg: #1f2208;
-  --pawpal-color: #b8cb38;
+  --pawpal-bg: rgb(51, 72, 51);
+  --pawpal-color: lightgreen;
+  --pawpal-color-light: rgb(143, 237, 143, 0.2);
   --pawpal-white: ghostwhite;
   --pawpal-font: "Lato", sans-serif;
   --pawpal-logo: "Unkempt", cursive;

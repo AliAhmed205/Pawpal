@@ -1,7 +1,7 @@
 
 .head {
   background-color: var(--pawpal-bg);
-  padding: 1rem 0;
+  padding: .3rem 0;
   color: var(--pawpal-color);
 
   & i {
@@ -12,11 +12,12 @@
   & a {
     margin-right: 1rem;
     color: var(--pawpal-white);
+    font-size: .8rem;
   }
 
   & button {
     margin-right: 1.5rem;
-    font-size: 1rem;
+    font-size: .8rem;
     border: none;
     background-color: transparent;
     color: var(--pawpal-white);
