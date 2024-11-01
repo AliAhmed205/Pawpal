@@ -24,16 +24,26 @@
 }
 
 .navBar {
-  & a {
+  &  a {
     font-weight: 900;
     font-family: var(--pawpal-logo);
-    font-size: 2rem;
+    font-size: 3rem;
   }
 
+
   & section {
+    background-color: var(--pawpal-color);
+    margin: 0;
+    padding: .5rem 4rem;
+
+
+    & h2 {
+      font-family: var(--pawpal-slogan);
+    }
+
     & .menu-bar {
+      margin-top: .5rem;
       position: relative;
-      gap: 1rem;
 
       & button {
         background-color: transparent;
@@ -41,19 +51,50 @@
         font-family: var(--pawpal-font);
         font-size: 1rem;
         font-weight: 900;
+        border-bottom: 2px solid transparent;
+        transition: .5s;
+
+
+        & i {
+          margin-left: .5rem;
+          transition: .2s;
+
+          &.turnActive {
+            rotate: 180deg;
+            color: var(--pawpal-color);
+          }
+        }
+
+        &:hover,
+        &:focus {
+          border-bottom: 2px solid var(--pawpal-color);
+        }
       }
+
+
 
       & .sub-menu {
         display: none;
         position: absolute;
+        background-color: ghostwhite;
+        top: 2rem;
+        padding: 0 1rem 1rem 1rem;
+        border-radius: 0 0 5% 5%;
 
         & a {
           display: block;
           font-family: var(--pawpal-font);
           font-size: 1rem;
           opacity: 0;
+          width: 200px;
           font-weight: 500;
           animation: fadeIn .5s var(--x) forwards;
+          padding: .5rem 0;
+          border-bottom: 0.1rem black solid;
+
+          &:focus {
+            background-color: var(--pawpal-color);
+          }
         }
       }
 

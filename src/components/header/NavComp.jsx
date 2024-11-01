@@ -20,21 +20,21 @@ const NavComp = () => {
       }
     };
 
-    document.addEventListener("mousedown", clickOutside);
+    document.addEventListener("click", clickOutside);
     
     return () => {
-      document.removeEventListener("mousedown", clickOutside);
+      document.removeEventListener("click", clickOutside);
     };
   }, []);
 
   return (
     <nav className="navBar">
-      <section className="container a_flex padding" ref={menuRef}>
+      <section className="a_flex padding" ref={menuRef}>
         <a href="/">
           <i className="fa-solid fa-paw"></i> PawPal
         </a>
-
-        <ul className="menu-bar f_flex ">
+          <h2>Zes voeten zijn beter dan twee</h2>
+        <ul className="menu-bar a_flex gap-1">
           <li>
             <button
               className="uppercase"
@@ -42,17 +42,18 @@ const NavComp = () => {
               aria-haspopup="true"
               aria-expanded={activeMenu === 1}
             >
-              Zoek een dier
+              zoek een dier
+              <i className={`fa-solid fa-arrow-down ${activeMenu === 1 ? "turnActive" : ""}`}></i>
             </button>
             <ul className={`sub-menu ${activeMenu === 1 ? "active" : ""}`}>
               <li>
-                <Link className="uppercase" style={{ '--x': '.0s' }} to="/katten">Katten</Link>
+                <Link className="uppercase" style={{ '--x': '.0s' }} to="/katten">katten</Link>
               </li>
               <li>
-                <Link className="uppercase" style={{ '--x': '.1s' }} to="/honden">Honden</Link>
+                <Link className="uppercase" style={{ '--x': '.1s' }} to="/honden">honden</Link>
               </li>
               <li>
-                <Link className="uppercase" style={{ '--x': '.2s' }} to="/vogels">Vogels</Link>
+                <Link className="uppercase" style={{ '--x': '.2s' }} to="/vogels">vogels</Link>
               </li>
             </ul>
           </li>
@@ -64,17 +65,18 @@ const NavComp = () => {
               aria-haspopup="true"
               aria-expanded={activeMenu === 2}
             >
-              Adoptie
+              over ons
+              <i className={`fa-solid fa-arrow-down ${activeMenu === 2 ? "turnActive" : "" }`}></i>
             </button>
             <ul className={`sub-menu ${activeMenu === 2 ? "active" : ""}`}>
               <li>
-                <Link className="uppercase" style={{ '--x': '0s' }} to="/katten">Katten</Link>
+                <Link className="uppercase" style={{ '--x': '0s' }} to="/katten">katten</Link>
               </li>
               <li>
-                <Link className="uppercase" style={{ '--x': '.1s' }} to="/honden">Honden</Link>
+                <Link className="uppercase" style={{ '--x': '.1s' }} to="/honden">honden</Link>
               </li>
               <li>
-                <Link className="uppercase" style={{ '--x': '.2s' }} to="/vogels">Vogels</Link>
+                <Link className="uppercase" style={{ '--x': '.2s' }} to="/vogels">vogels</Link>
               </li>
             </ul>
           </li>
@@ -86,17 +88,18 @@ const NavComp = () => {
               aria-haspopup="true"
               aria-expanded={activeMenu === 3}
             >
-              Appel
+              tips
+              <i className={`fa-solid fa-arrow-down ${activeMenu === 3 ? "turnActive" : ""}`}></i>
             </button>
             <ul className={`sub-menu ${activeMenu === 3 ? "active" : ""}`}>
               <li>
-                <Link className="uppercase" style={{ '--x': '0s' }} to="/katten">Katten</Link>
+                <Link className="uppercase" style={{ '--x': '0s' }} to="/katten">katten</Link>
               </li>
               <li>
-                <Link className="uppercase" style={{ '--x': '.1s' }} to="/honden">Honden</Link>
+                <Link className="uppercase" style={{ '--x': '.1s' }} to="/honden">honden</Link>
               </li>
               <li>
-                <Link className="uppercase" style={{ '--x': '.2s' }} to="/vogels">Vogels</Link>
+                <Link className="uppercase" style={{ '--x': '.2s' }} to="/vogels">vogels</Link>
               </li>
             </ul>
           </li>
