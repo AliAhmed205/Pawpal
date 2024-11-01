@@ -8,7 +8,8 @@
     "description": "Een speelse en nieuwsgierige kat die het leuk vindt om haar omgeving te verkennen.",
     "photoUrl": "https://images.pexels.com/photos/162174/cat-british-shorthair-mieze-blue-eye-162174.jpeg",
     "breed": "Siamese",
-    "adoptionStatus": "beschikbaar"
+    "adoptionStatus": "beschikbaar",
+    "icon": "fa-solid fa-cat"
   },
   {
     "id": 2,
@@ -19,7 +20,9 @@
     "description": "Vriendelijke en energieke hond die graag wandelt en speelt met een bal.",
     "photoUrl": "https://images.pexels.com/photos/2253275/pexels-photo-2253275.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=2",
     "breed": "Labrador Retriever",
-    "adoptionStatus": "beschikbaar"
+    "adoptionStatus": "beschikbaar",
+    "icon": "fa-solid fa-dog"
+
   },
   {
     "id": 3,
@@ -30,7 +33,8 @@
     "description": "Een kleine en vrolijke vogel met een prachtige gele kleur. Houdt ervan om 's ochtends te zingen.",
     "photoUrl": "https://images.pexels.com/photos/10147912/pexels-photo-10147912.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=2",
     "breed": "Kanarie",
-    "adoptionStatus": "geadopteerd"
+    "adoptionStatus": "geadopteerd",
+    "icon": "fa-solid fa-crow"
   },
   {
     "id": 4,
@@ -41,7 +45,9 @@
     "description": "Onafhankelijk en intelligent, Shadow houdt van een knusse hoek om in uit te rusten.",
     "photoUrl": "https://images.pexels.com/photos/29175980/pexels-photo-29175980/free-photo-of-adorable-british-shorthair-cat-with-plush-fur.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=2",
     "breed": "Britse Korthaar",
-    "adoptionStatus": "beschikbaar"
+    "adoptionStatus": "beschikbaar",
+    "icon": "fa-solid fa-cat"
+
   },
   {
     "id": 5,
@@ -52,7 +58,8 @@
     "description": "Een jonge en speelse puppy die ernaar uitkijkt om zijn voor altijd huisje te vinden.",
     "photoUrl": "https://images.pexels.com/photos/26202791/pexels-photo-26202791/free-photo-of-beagle-on-a-beach.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=2",
     "breed": "Beagle",
-    "adoptionStatus": "beschikbaar"
+    "adoptionStatus": "beschikbaar",
+    "icon": "fa-solid fa-dog"
   },
   {
     "id": 6,
@@ -63,7 +70,9 @@
     "description": "Houdt ervan om te tjilpen en is zeer vriendelijk tegen iedereen.",
     "photoUrl": "https://images.pexels.com/photos/2431457/pexels-photo-2431457.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=2",
     "breed": "Parkiet",
-    "adoptionStatus": "beschikbaar"
+    "adoptionStatus": "beschikbaar",
+    "icon": "fa-solid fa-crow"
+
   },
   {
     "id": 7,
@@ -74,7 +83,8 @@
     "description": "Een rustige en aanhankelijke kat die ervan houdt om in de zon te liggen.",
     "photoUrl": "https://images.pexels.com/photos/126407/pexels-photo-126407.jpeg",
     "breed": "Maine Coon",
-    "adoptionStatus": "beschikbaar"
+    "adoptionStatus": "beschikbaar",
+    "icon": "fa-solid fa-cat"
   },
   {
     "id": 8,
@@ -85,6 +95,7 @@
     "description": "Een loyale en beschermende hond die graag speelt met een bal.",
     "photoUrl": "https://images.pexels.com/photos/351406/pexels-photo-351406.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=2",
     "breed": "Duitse Herder",
-    "adoptionStatus": "beschikbaar"
+    "adoptionStatus": "beschikbaar",
+    "icon": "fa-solid fa-dog"
   }
 ]

@@ -26,8 +26,6 @@ const Hero = () => {
           position: "relative",
 
           backgroundImage: "url(/images/bg.webp)",
-          // linear-gradient(45deg, rgb(118, 169, 118) 5%, transparent 5%);
-          // background-size: 40px 40px; 
           zIndex: "2"
       }}>
         <article>
