@@ -4,7 +4,7 @@ import animalData from "../../animal.json";
 const Amounts = () => {
   const [counts, setCounts] = useState({ cats: 0, dogs: 0, birds: 0 });
   const [isInView, setIsInView] = useState(false);
-  const ref = useRef(null); 
+  const ref = useRef(null); // Referentie naar de sectie
 
   useEffect(() => {
     const catCount = animalData.filter((animal) => animal.type === "kat").length;
@@ -26,13 +26,15 @@ const Amounts = () => {
       { threshold: 0.1 } 
     );
 
-    if (ref.current) {
-      observer.observe(ref.current);
+    const currentRef = ref.current; 
+
+    if (currentRef) {
+      observer.observe(currentRef);
     }
 
     return () => {
-      if (ref.current) {
-        observer.unobserve(ref.current);
+      if (currentRef) {
+        observer.unobserve(currentRef);
       }
     };
   }, [ref]);
@@ -40,7 +42,7 @@ const Amounts = () => {
   return (
     <>
       <section 
-        ref={ref} 
+        ref={ref} // Attach the ref here
         id="Amount-container" 
         className="amount-container h_flex"
         style={{
