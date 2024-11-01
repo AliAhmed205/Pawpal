@@ -25,7 +25,8 @@
 }
 
 .navBar {
-
+  position: relative;
+  z-index: 3;
 
   &  a {
     font-weight: 900;

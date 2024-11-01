@@ -243,35 +243,63 @@
 /* Animal adoption section */
 
 .adopt-container {
-  padding: 20px;
+  background-color: rgb(242, 255, 242);
 
-  article {
-    h2 {
-      margin-bottom: 20px;
+  padding: 2rem 0;
+  & article {
+    & h2 {
+      font-size: 3rem;
+      font-family: var(--pawpal-logo);
     }
 
-    .animal-grid {
+    & > p {
+      width: 50%;
+    }
+
+    & .animal-grid {
       display: flex;
       flex-wrap: wrap;
       gap: 20px;
-      margin: 0 10rem;
+    }
+
+    .filter-options {
+      & label {
+        font-weight: 900;
+        margin-right: .5rem;
+      }
+
+      & select {
+        padding: .5rem;
+        border-radius: 2rem;
+      }
     }
 
     & ul {
       display: none;
     }
 
-    .animal-card {
+    & .animal-card {
       flex: 0 1 calc(33.333% - 20px);
       /* CHATGPT: Zorgt ervoor dat elke kaart een derde van de containerbreedte inneemt, minus de gap */
       box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
       border-radius: 8px;
       overflow: hidden;
       background-color: var(--pawpal-color);
+      
 
       & a {
         display: block;
         text-decoration: none;
+        transition: .2s;
+
+        &:hover,
+        &:focus {
+          background-color: goldenrod;
+
+          & img {
+            filter: grayscale(0);
+          }
+        }
       }
 
       & .image-container {
@@ -283,6 +311,8 @@
           height: auto;
           object-fit: cover;
           background-position: center;
+          transition: .2s;
+          filter: grayscale(1) brightness(.5) sepia(1) hue-rotate(50deg) saturate(1);
         }
 
         & i {
@@ -291,6 +321,7 @@
           right: 1%;
           font-size: 2rem;
           color: var(--pawpal-white);
+          z-index: 1;
         }
 
         & .adoption-status {
@@ -302,6 +333,7 @@
           background-color: var(--pawpal-color);
           border-radius: 0 0 0 1rem;
           font-family: var(--pawpal-logo);
+          z-index: 1;
         }
       }
 
@@ -328,5 +360,7 @@
         }
       }
     }
+
+
   }
 }
