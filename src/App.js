@@ -42,8 +42,6 @@ function App() {
 
           <Route path='/adopt/' element={
             <>
-              <Hero />
-              <Amounts />
               <Adopt />
           </>} />
         </Routes>

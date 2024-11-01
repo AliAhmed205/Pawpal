@@ -1,0 +1,42 @@
+.animal-detail {
+
+  & .detail {
+    display: flex;
+
+    & div {
+      display: flex;
+      flex-direction: column;
+      padding: 2rem;
+
+      & p:first-of-type {
+        display: flex;
+        flex-direction: row;
+        & a {
+          text-decoration: underline;
+        }
+      }
+
+      & h2 {
+        font-size: 3rem;
+        font-family: var(--pawpal-logo);
+      }
+
+      & img {
+        width: 30rem;
+        aspect-ratio: 1/1;
+        object-fit: cover;
+        border-radius: 2rem;
+      }
+
+      & p {
+        display: flex;
+        flex-direction: column;
+        margin: .5rem 0;
+
+        & span {
+          font-weight: 900;
+        }
+      }
+    }
+  }
+}

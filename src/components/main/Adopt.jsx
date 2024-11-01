@@ -76,7 +76,6 @@ const Adopt = () => {
                     <h3>{animal.name}</h3>
                     <p className="breed">{animal.breed}</p>
                     <p className="age">{animal.age} jaar oud</p>
-                    <p className="description">{animal.description}</p>
                   </div>
                 </Link>
               </div>
