@@ -2,7 +2,7 @@
 
 :root {
   --pawpal-bg: rgb(9, 46, 5);
-  --pawpal-color: limegreen;
+  --pawpal-color: lightgreen;
   --pawpal-white: ghostwhite;
   --pawpal-font: "Lato", sans-serif;
   --pawpal-logo: "Unkempt", cursive;
@@ -15,6 +15,10 @@ body {
   margin: 0;
   padding: 0;
   box-sizing: border-box;
+}
+
+html {
+  scroll-behavior: smooth;
 }
 
 body {

@@ -28,7 +28,7 @@ const Hero = () => {
           backgroundImage: "url(/images/bg.webp)",
           // linear-gradient(45deg, rgb(118, 169, 118) 5%, transparent 5%);
           // background-size: 40px 40px; 
-          zIndex: "-1"
+          zIndex: "2"
       }}>
         <article>
           <h2><i className="fa-solid fa-dog"></i> Welkom!</h2>
@@ -37,7 +37,7 @@ const Hero = () => {
             ondersteuning tot lid van de familie, bezitten we talloze soorten en
             maten dieren die opzoek zijn naar nieuw baasje
           </p>
-          <a href="/">
+          <a href="#Amount-container">
             <i className="fa-solid fa-paw"></i> vind een pal
           </a>
         </article>

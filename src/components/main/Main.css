@@ -92,8 +92,8 @@
   }
 
   & .text-cloud {
-    z-index: 1;
-
+    z-index: -1;
+    position: absolute;
     display: grid;
     grid-template-columns: repeat(11, 1fr);
     grid-template-rows: repeat(10, 1fr);
@@ -162,6 +162,7 @@
 /* Amount container */
 
 .amount-container {
+  position: relative;
   width: 100vw;
   height: 100vh;
   background-color: var(--pawpal-color);
@@ -171,15 +172,16 @@
     width: 50%;
     margin: 0 auto;
     text-align: center;
+    font-size: 1.5rem;
   }
 
   & h2 {
     font-family: var(--pawpal-logo);
     font-size: 4rem;
-    opacity: 0;
+    opacity: 1;
     font-weight: 900;
-    scale: .5;
-    animation: fadeIn .5s .5s cubic-bezier(0.175, 0.885, 0.32, 1.275) forwards, popUp .5s .5s cubic-bezier(0.175, 0.885, 0.32, 1.275) forwards;
+    color: rgb(0, 53, 0);
+    scale: 1;
   }
 
   & section {
@@ -188,7 +190,7 @@
     & article {
       margin-top: 2rem;
       margin-bottom: auto;
-      background-color: lightgreen;
+      background-color: ghostwhite;
       box-shadow: rgba(0, 0, 0, 0.1) 0 10px 10px;
       width: 300px;
       height: 150px;
@@ -200,22 +202,62 @@
       }
 
       & p {
-        font-size: 3rem;
-      }
-
-      &:nth-of-type(1){
-
-      }
-      &:nth-of-type(2){
-
-
-      }
-      &:nth-of-type(3){
-
-
+        font-size: 5rem;
       }
     }
+  }
+
+  & .paw-walking {
+
+    display: grid;
+    grid-template-columns: repeat(8, 60px);
+    grid-template-rows: repeat(2, 60px);
+    justify-content: center;
+    position: absolute;
+    top: 3rem;
+    width: 100vw;
+    height: 20vh;
 
 
+    & i {
+      rotate: 90deg;
+      font-size: 5rem;
+      opacity: 0;
+      color: var(--pawpal-bg);
+      animation: trace .5s var(--x) forwards;
+
+      &:nth-of-type(1){
+        grid-column: 1;
+        grid-row: 1;
+      }
+      &:nth-of-type(2){
+        grid-column: 2;
+        grid-row: 2;
+      }
+      &:nth-of-type(3){
+        grid-column: 3;
+        grid-row: 1;
+      }
+      &:nth-of-type(4){
+        grid-column: 4;
+        grid-row: 2;
+      }
+      &:nth-of-type(5){
+        grid-column: 5;
+        grid-row: 1;
+      }
+      &:nth-of-type(6){
+        grid-column: 6;
+        grid-row: 2;
+      }
+      &:nth-of-type(7){
+        grid-column: 7;
+        grid-row: 1;
+      }
+      &:nth-of-type(8){
+        grid-column: 8;
+        grid-row: 2;
+      }
+    }
   }
 }
