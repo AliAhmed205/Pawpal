@@ -1,9 +1,14 @@
 .hero-container {
-  width: 100vw;
-  height: 87vh;
+  /* width: 100vw;
+  height: 90vh;
   overflow: hidden;
   position: relative;
-  
+  background-color: rgb(234, 255, 234);
+  background-image: 
+  linear-gradient(45deg, rgb(118, 169, 118) 5%, transparent 5%);
+  background-size: 40px 40px; 
+  z-index: 1; */
+
 
   display: grid;
   grid-template-columns: repeat(11, 1fr);
@@ -12,6 +17,10 @@
   & article {
     grid-row: 7/10;
     grid-column: 8/11;
+    scale: .8;
+    opacity: 0;
+    animation: fadeIn .5s .5s forwards ,popUp .5s .5s forwards cubic-bezier(0.175, 0.885, 0.32, 1.275);
+
 
     height: fit-content;
     position: relative;
@@ -25,6 +34,11 @@
     padding: 1rem;
     border-radius: 1rem;
     box-shadow: rgba(0, 0, 0, 0.2) 5px 5px 10px;
+
+    & h2 {
+      font-family: var(--pawpal-logo);
+      font-size: 2rem;
+    }
 
     & p {
       margin-bottom: auto;
@@ -44,7 +58,7 @@
   & .absolute-container {
     position: absolute;
     width: 100vw;
-    height: 87vh;
+    height: 90vh;
     top: 0;
 
   }
@@ -56,49 +70,152 @@
     display: grid;
     grid-template-columns: repeat(11, 1fr);
     grid-template-rows: repeat(10, 1fr);
-    
+
     & img {
       width: 40rem;
       aspect-ratio: 1/1;
       object-fit: cover;
       object-position: top;
-      grid-column: 5/7;
+      grid-column: 5/8;
+      opacity: 0;
       grid-row: 10;
-  
+      transition: opacity .5s .5s ease-in;
+      scale: .9;
+      animation: popUp .5s cubic-bezier(0.175, 0.885, 0.32, 1.275) forwards;
+
     }
+
+    & img.active {
+      opacity: 1;
     }
 
-    & .text-cloud {
-      z-index: 1;
-  
-      display: grid;
-      grid-template-columns: repeat(11, 1fr);
-      grid-template-rows: repeat(10, 1fr);
-  
-      & h1 {
-        /* padding: 1rem; */
+  }
 
-        &:first-of-type {
-          grid-row: 4;
-          grid-column: 2/4;
-          font-size: 2rem;
-          margin-top: auto;
-        }
+  & .text-cloud {
+    z-index: 1;
 
-        &:nth-of-type(2){
-          grid-row: 5;
-          grid-column: 2/5;
-          font-size: 4rem;
-          text-transform: uppercase;
-          color: var(--pawpal-color);
-          font-weight: 900;
-        }
-        &:nth-of-type(3){
-          grid-row: 6;
-          grid-column: 3/6;
-          font-size: 2rem;
+    display: grid;
+    grid-template-columns: repeat(11, 1fr);
+    grid-template-rows: repeat(10, 1fr);
 
-        }
+    /* & h1 {
+
+      &:first-of-type {
+        grid-row: 4;
+        grid-column: 2/4;
+        font-size: 2rem;
+        margin-top: auto;
+      }
+
+      &:nth-of-type(2) {
+        grid-row: 5;
+        grid-column: 2/5;
+        font-size: 4rem;
+        text-transform: uppercase;
+        color: var(--pawpal-color);
+        font-weight: 900;
+        line-height: 3rem;
+
+
+      }
+
+      &:nth-of-type(3) {
+        grid-row: 6;
+        grid-column: 3/6;
+        font-size: 2rem;
+        line-height: 0rem;
+
+
+      }
+    } */
+ 
+    & .cls-1 {
+      fill: #000;
+    }
+
+    & .cls-1, .cls-2, .cls-3 {
+      stroke-width: 0px;
+    }
+
+    & .cls-2 {
+      fill: #fff;
+    }
+
+    & .cls-3 {
+      fill: var(--pawpal-color);
+    }
+
+    & svg{
+      width: 30rem;
+      filter: drop-shadow(rgb(0, 0, 0, 0.2)0px 10px 4px) ;
+      grid-row: 4;
+      grid-column: 2/3;
+      opacity: 0;
+      scale: .8;
+      animation: fadeIn .5s .5s forwards ,popUp .5s .5s forwards cubic-bezier(0.175, 0.885, 0.32, 1.275);
+
+
+    }
+  }
+}
+
+/* Amount container */
+
+.amount-container {
+  width: 100vw;
+  height: 100vh;
+  background-color: var(--pawpal-color);
+
+
+  & >p {
+    width: 50%;
+    margin: 0 auto;
+    text-align: center;
+  }
+
+  & h2 {
+    font-family: var(--pawpal-logo);
+    font-size: 4rem;
+    opacity: 0;
+    font-weight: 900;
+    scale: .5;
+    animation: fadeIn .5s .5s cubic-bezier(0.175, 0.885, 0.32, 1.275) forwards, popUp .5s .5s cubic-bezier(0.175, 0.885, 0.32, 1.275) forwards;
+  }
+
+  & section {
+    gap: 2rem;
+
+    & article {
+      margin-top: 2rem;
+      margin-bottom: auto;
+      background-color: lightgreen;
+      box-shadow: rgba(0, 0, 0, 0.1) 0 10px 10px;
+      width: 300px;
+      height: 150px;
+      border-radius: 1rem;
+      padding: 1rem;
+      
+      & h3 {
+        font-family: var(--pawpal-logo);
+      }
+
+      & p {
+        font-size: 3rem;
+      }
+
+      &:nth-of-type(1){
+
+      }
+      &:nth-of-type(2){
+
+
+      }
+      &:nth-of-type(3){
+
+
       }
     }
+
+
+  }
 }

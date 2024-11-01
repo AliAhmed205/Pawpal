@@ -1,0 +1,17 @@
+@keyframes fadeIn {
+  to {
+    opacity: 1;
+  }
+}
+
+@keyframes popUp {
+  to {
+    scale: 1;
+  }
+}
+
+@keyframes moveUp {
+  to {
+    transform: translateY(0);
+  }
+}

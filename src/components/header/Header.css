@@ -25,10 +25,13 @@
 }
 
 .navBar {
+
+
   &  a {
     font-weight: 900;
     font-family: var(--pawpal-logo);
-    font-size: 3rem;
+    font-size: 2rem;
+    
   }
 
 
@@ -62,13 +65,13 @@
 
           &.turnActive {
             rotate: 180deg;
-            color: var(--pawpal-color);
+            color: var(--pawpal-bg);
           }
         }
 
         &:hover,
         &:focus {
-          border-bottom: 2px solid var(--pawpal-color);
+          border-bottom: 2px solid var(--pawpal-black);
         }
       }
 
@@ -105,9 +108,3 @@
     }
   }
 }
-
- @keyframes fadeIn {
-  to {
-    opacity: 1;
-  }
- }
