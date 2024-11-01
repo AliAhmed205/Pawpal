@@ -1,0 +1,71 @@
+
+.head {
+  background-color: var(--pawpal-bg);
+  padding: 1rem 0;
+  color: var(--pawpal-color);
+
+  & i {
+    margin-right: .4rem;
+    color: var(--pawpal-color);
+  }
+
+  & a {
+    margin-right: 1rem;
+    color: var(--pawpal-white);
+  }
+
+  & button {
+    margin-right: 1.5rem;
+    font-size: 1rem;
+    border: none;
+    background-color: transparent;
+    color: var(--pawpal-white);
+  }
+}
+
+.navBar {
+  & a {
+    font-weight: 900;
+    font-family: var(--pawpal-logo);
+    font-size: 2rem;
+  }
+
+  & section {
+    & .menu-bar {
+      position: relative;
+      gap: 1rem;
+
+      & button {
+        background-color: transparent;
+        border: none;
+        font-family: var(--pawpal-font);
+        font-size: 1rem;
+        font-weight: 900;
+      }
+
+      & .sub-menu {
+        display: none;
+        position: absolute;
+
+        & a {
+          display: block;
+          font-family: var(--pawpal-font);
+          font-size: 1rem;
+          opacity: 0;
+          font-weight: 500;
+          animation: fadeIn .5s var(--x) forwards;
+        }
+      }
+
+      & .sub-menu.active {
+        display: block;
+      }
+    }
+  }
+}
+
+ @keyframes fadeIn {
+  to {
+    opacity: 1;
+  }
+ }
