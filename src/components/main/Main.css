@@ -246,13 +246,14 @@
   background-color: rgb(242, 255, 242);
 
   padding: 2rem 0;
+
   & article {
     & h2 {
       font-size: 3rem;
       font-family: var(--pawpal-logo);
     }
 
-    & > p {
+    &>p {
       width: 50%;
     }
 
@@ -285,7 +286,7 @@
       border-radius: 8px;
       overflow: hidden;
       background-color: var(--pawpal-color);
-      
+
 
       & a {
         display: block;
@@ -354,7 +355,8 @@
         & .breed {
           margin: 0;
           font-size: 1.5rem;
-        } 
+        }
+
         & .age {
           margin-bottom: 1rem;
         }
@@ -365,7 +367,7 @@
   }
 }
 
-@media screen and (max-width: 1000px){
+@media screen and (max-width: 1000px) {
 
   .hero-container {
     display: block;
@@ -381,7 +383,7 @@
       justify-content: center;
       width: 100%
     }
-  
+
     & .text-cloud {
       display: block;
 
@@ -390,7 +392,7 @@
         padding: 2rem;
       }
     }
-  
+
   }
 
 
@@ -401,16 +403,17 @@
       margin: 0;
     }
 
-    & > p {
+    &>p {
       font-size: 1rem;
       width: 90%;
       margin: 0;
     }
+
     .paw-walking {
       display: none;
     }
 
-    & section:nth-of-type(2){
+    & section:nth-of-type(2) {
       flex-direction: column;
     }
   }
@@ -419,8 +422,16 @@
     & article {
       margin: 1rem;
 
-      & > p {
+      &>p {
         width: 100%;
+      }
+
+      & .filter-options {
+
+        select {
+          width: 100%;
+          margin: .5rem 0;
+        }
       }
 
       & .animal-grid {
