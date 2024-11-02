@@ -1,4 +1,5 @@
 <h6>Developed with: React. I created this project to practice filtering, routing and dynamic data.</h6>
+<h5>This project was developed for my own personal educational growth</h5>
 
 # <img width="250" src="https://github.com/user-attachments/assets/713e81eb-73e5-4444-ab8c-6eca5367f8e6" alt="Pawpel Logo">
 
