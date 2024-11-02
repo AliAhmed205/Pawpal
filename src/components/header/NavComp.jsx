@@ -5,38 +5,37 @@ const NavComp = () => {
   const [activeMenu, setActiveMenu] = useState(null);
   const [isMenuActive, setIsMenuActive] = useState(false);
   const menuRef = useRef(null);
+  const phoneMenuRef = useRef(null); 
 
   const toggleMenu = (menuIndex) => {
-    if (activeMenu === menuIndex) {
-      setActiveMenu(null);
-    } else {
-      setActiveMenu(menuIndex);
-    }
+    setActiveMenu(activeMenu === menuIndex ? null : menuIndex);
   };
 
-  const togglePhoneMenu = () => {
-    const newState = !isMenuActive;
-    console.log('Toggle menu active state:', newState); // Controleer de nieuwe status
-    setIsMenuActive(newState);
+  const openPhoneMenu = (event) => {
+    event.stopPropagation(); // AI Assistance (For some reason, the class was adding and removing it at the same time, so it fixed it for me.)
+    setIsMenuActive(true);
+    console.log("Menu geopend:", true);
   };
-  
-  // In de render sectie
-  console.log('isMenuActive:', isMenuActive); // Log de huidige status in de render
-  
+
+  const closePhoneMenu = () => {
+    setIsMenuActive(false);
+    console.log("Menu gesloten:", false);
+  };
 
   useEffect(() => {
     const clickOutside = (event) => {
-      if (menuRef.current && !menuRef.current.contains(event.target)) {
-        setActiveMenu(null);
-        setIsMenuActive(false); 
+      // AI Assistance (For some reason, the class was adding and removing it at the same time, so it fixed it for me.)
+      if (phoneMenuRef.current && !phoneMenuRef.current.contains(event.target) && isMenuActive) {
+        closePhoneMenu();
       }
     };
 
     document.addEventListener("click", clickOutside);
+
     return () => {
       document.removeEventListener("click", clickOutside);
     };
-  }, []);
+  }, [isMenuActive]);
 
   return (
     <>
@@ -55,28 +54,12 @@ const NavComp = () => {
                 aria-expanded={activeMenu === 1}
               >
                 zoek een dier
-                <i
-                  className={`fa-solid fa-arrow-down ${
-                    activeMenu === 1 ? "turnActive" : ""
-                  }`}
-                ></i>
+                <i className={`fa-solid fa-arrow-down ${activeMenu === 1 ? "turnActive" : ""}`}></i>
               </button>
               <ul className={`sub-menu ${activeMenu === 1 ? "active" : ""}`}>
-                <li>
-                  <Link className="uppercase" style={{ "--x": ".0s" }} to="/katten">
-                    katten
-                  </Link>
-                </li>
-                <li>
-                  <Link className="uppercase" style={{ "--x": ".1s" }} to="/honden">
-                    honden
-                  </Link>
-                </li>
-                <li>
-                  <Link className="uppercase" style={{ "--x": ".2s" }} to="/vogels">
-                    vogels
-                  </Link>
-                </li>
+                <li><Link className="uppercase" style={{ "--x": ".0s" }} to="/katten">katten</Link></li>
+                <li><Link className="uppercase" style={{ "--x": ".1s" }} to="/honden">honden</Link></li>
+                <li><Link className="uppercase" style={{ "--x": ".2s" }} to="/vogels">vogels</Link></li>
               </ul>
             </li>
             <li>
@@ -87,11 +70,7 @@ const NavComp = () => {
                 aria-expanded={activeMenu === 2}
               >
                 over ons
-                <i
-                  className={`fa-solid fa-arrow-down ${
-                    activeMenu === 2 ? "turnActive" : ""
-                  }`}
-                ></i>
+                <i className={`fa-solid fa-arrow-down ${activeMenu === 2 ? "turnActive" : ""}`}></i>
               </button>
             </li>
             <li>
@@ -102,11 +81,7 @@ const NavComp = () => {
                 aria-expanded={activeMenu === 3}
               >
                 tips
-                <i
-                  className={`fa-solid fa-arrow-down ${
-                    activeMenu === 3 ? "turnActive" : ""
-                  }`}
-                ></i>
+                <i className={`fa-solid fa-arrow-down ${activeMenu === 3 ? "turnActive" : ""}`}></i>
               </button>
             </li>
           </ul>
@@ -120,28 +95,20 @@ const NavComp = () => {
         <button
           type="button"
           className="menuButton"
-          onClick={togglePhoneMenu}
+          onClick={openPhoneMenu}
         >
           <i className="fa fa-solid fa-bars"></i>
         </button>
-        <ul className={`menu-bar ${isMenuActive ? "reveal" : ""}`}> 
+        <ul className={`phone-bar ${isMenuActive ? "reveal" : ""}`} ref={phoneMenuRef}>
           <div className="close-container c_flex">
-            <h2>
-              <i className="fa fa-solid fa-paw"></i> Menu
-            </h2>
-            <button onClick={togglePhoneMenu}> 
+            <h2><i className="fa fa-solid fa-paw"></i> Menu</h2>
+            <button onClick={closePhoneMenu}>
               <i className="fa fa-solid fa-x"></i>
             </button>
           </div>
-          <li>
-            <Link to="/katten">Katten</Link>
-          </li>
-          <li>
-            <Link to="/honden">Honden</Link>
-          </li>
-          <li>
-            <Link to="/vogels">Vogels</Link>
-          </li>
+          <li><Link to="/katten">Katten</Link></li>
+          <li><Link to="/honden">Honden</Link></li>
+          <li><Link to="/vogels">Vogels</Link></li>
         </ul>
       </nav>
     </>
