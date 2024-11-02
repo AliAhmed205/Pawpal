@@ -106,9 +106,9 @@ const NavComp = () => {
               <i className="fa fa-solid fa-x"></i>
             </button>
           </div>
-          <li><Link to="/katten">Katten</Link></li>
-          <li><Link to="/honden">Honden</Link></li>
-          <li><Link to="/vogels">Vogels</Link></li>
+          <li><Link onClick={closePhoneMenu} to="/katten">Katten</Link></li>
+          <li><Link onClick={closePhoneMenu} to="/honden">Honden</Link></li>
+          <li><Link onClick={closePhoneMenu} to="/vogels">Vogels</Link></li>
         </ul>
       </nav>
     </>
