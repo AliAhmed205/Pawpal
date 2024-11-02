@@ -140,6 +140,7 @@
       border: none;
       background-color: transparent;
       font-size: 1.5rem;
+      color: var(--pawpal-bg);
     }
 
     & .phone-bar {
