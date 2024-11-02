@@ -19,15 +19,21 @@ body {
 
 html {
   scroll-behavior: smooth;
+
 }
 
 body {
   font-family: var(--pawpal-font);
+  overflow-x: hidden;
 }
 
 a {
   text-decoration: none;
   color: var(--pawpal-black)
+}
+
+#root {
+  overflow-x: hidden;
 }
 
 /*  Utility styling  */
