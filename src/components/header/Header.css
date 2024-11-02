@@ -152,12 +152,12 @@
       height: 100vh;
       background-color: var(--pawpal-color);
       padding: 1rem;
-      transform: translateX(100%); /* initially hide the menu */
-      transition: transform 0.5s ease-in-out; /* smooth transition */
+      transform: translateX(100%); 
+      transition: transform 0.5s ease-in-out; 
     }
     
     & .phone-bar.reveal {
-      transform: translateX(0); /* reveal the menu */
+      transform: translateX(0); 
     }
     
 
