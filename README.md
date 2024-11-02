@@ -19,6 +19,23 @@
 | Status | The dynamic adoption status of an animal card |
 | Pet Profiles | Detailed profiles for each animal, including a photo and description. |
 
+<img src="https://github.com/user-attachments/assets/5c691fce-ff7d-44c7-8f91-1d28b43a9cc2" alt="Online recourses">
+
+<p>I like to give credit to some of the following YouTubers who assisted me as far as they could.</p>
+
+<img width="50" src="https://github.com/user-attachments/assets/b6988824-6c91-4cb1-91bb-fabf0de05b56" alt="YouTube Icon">
+
+* <a href="https://www.youtube.com/watch?v=aZGzwEjZrXc">Net Ninja - Full React Tutorial #21 - The React Router</a>
+* <a href="https://www.youtube.com/watch?v=PAv5gEqU0fI">Pro Academy - Adding classes dynamically </a>
+* <a href="https://www.youtube.com/watch?v=xAqCEBFGdYk&t=133s">Code Commerce - Search Filter in React JS</a>
+* <a href="https://www.youtube.com/watch?v=Cla1WwguArA">Codevolution - Functional Components</a>
+<br>
+<img width="50" src="https://github.com/user-attachments/assets/ca17b26d-b03a-4814-a4ce-2f698d3c5f32" alt="ChatGPT">
+<p>ChatGPT assisted me into explaining the code I wrote. I find it important to know what I'm writing from wether the tutorials or MDN. 
+I also appreciate his input, when he makes some effecient changes, and how it improves my code structure. <b>Something I want improve in
+as a developer myself. Creating a stable and balanced tree that both dynamic and structured.</b></p>
+
+
 ## <img src="https://github.com/user-attachments/assets/5a7ecc49-07ca-41c8-b241-6301015f48c0" alt="Installation">
 
 <p>Feel free to install the project. Here's a stepy by step guide to do so.</p>
