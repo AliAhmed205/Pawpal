@@ -16,7 +16,13 @@ const AnimalDetail = () => {
         <div>
           <img src={animal.photoUrl} alt={animal.name} />
         </div>
-        <div>
+        <div style={
+          {
+            backgroundImage: "url(/images/paw-white.png)",
+            backgroundRepeat: "no-repeat",
+            backgroundSize: "cover",
+            }
+        }>
           <p>
             <Link
               style={{
@@ -52,9 +58,13 @@ const AnimalDetail = () => {
           >
             {animal.name}
           </h2>
-          <i style={{
-            "--x" : ".2s"
-          }} className={animal.icon}></i>
+          <i
+            style={{
+              "--x": ".2s",
+            }}
+            className={animal.icon}
+          ></i>
+          <div className="attributes-container">
           <p
             style={{
               "--x": ".3s",
@@ -87,6 +97,7 @@ const AnimalDetail = () => {
             <span>Status</span>
             {animal.adoptionStatus}
           </p>
+          </div>
           <p
             style={{
               "--x": ".7s",
