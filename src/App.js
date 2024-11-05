@@ -7,6 +7,9 @@ import Hero from './components/main/Hero';
 import Amounts from './components/main/Amounts';
 import Adopt from './components/main/Adopt';
 import AnimalDetail from './components/main/AnimalDetail';
+import Dog from './components/main/Dog';
+import Cat from './components/main/Cat';
+import Bird from './components/main/Bird';
 
 function App() {
   return (
@@ -29,15 +32,15 @@ function App() {
           
           <Route path='/vogels/' element={
             <>
-              <Adopt />
+              <Bird />
           </>} />
           <Route path='/katten/' element={
             <>
-              <Adopt />
+              <Cat />
           </>} />
           <Route path='/honden/' element={
             <>
-              <Adopt />
+              <Dog />
           </>} />
 
           <Route path='/adopt/' element={
