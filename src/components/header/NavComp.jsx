@@ -57,9 +57,9 @@ const NavComp = () => {
                 <i className={`fa-solid fa-arrow-down ${activeMenu === 1 ? "turnActive" : ""}`}></i>
               </button>
               <ul className={`sub-menu ${activeMenu === 1 ? "active" : ""}`}>
-                <li><Link className="uppercase" style={{ "--x": ".0s" }} to="/katten">katten</Link></li>
-                <li><Link className="uppercase" style={{ "--x": ".1s" }} to="/honden">honden</Link></li>
-                <li><Link className="uppercase" style={{ "--x": ".2s" }} to="/vogels">vogels</Link></li>
+                <li><Link onClick={() => toggleMenu(null)} className="uppercase" style={{ "--x": ".0s" }} to="/katten">katten</Link></li>
+                <li><Link onClick={() => toggleMenu(null)} className="uppercase" style={{ "--x": ".1s" }} to="/honden">honden</Link></li>
+                <li><Link onClick={() => toggleMenu(null)} className="uppercase" style={{ "--x": ".2s" }} to="/vogels">vogels</Link></li>
               </ul>
             </li>
             <li>

@@ -28,9 +28,9 @@ const Dog = () => {
     <>
       <section className="adopt-container">
         <article className="width b_flex">
-          <h2>Dieren te Adoptie</h2>
+          <h2>Honden te Adoptie</h2>
           <p>
-            Hier kun je al onze dieren vinden. Van vogels tot honden, van jong
+            Hier kun je al onze honden vinden. Van jong
             tot oud. Als je iets fijner wilt gaan zoeken naar jouw ideale
             viervoeter, <b>kun je gebruik maken van onze filter onderin.</b>{" "}
             Hopelijk vind je jouw nieuwe pawpal hier!
